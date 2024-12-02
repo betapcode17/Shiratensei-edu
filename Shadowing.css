@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background-image: url(./Image/nen.jpg);
+}
+
+/* ===========common */
+a {
+  text-decoration: none;
+  position: relative;
+  color: currentColor;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 6px;
+  min-width: 118px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background-color: #171100;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.main-content {
+  width: 1440px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================= SHADOWING ====================================== */
+.shadowing .body {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Cột 1 chiếm 1 phần, cột 2 chiếm 2 phần */
+  grid-template-rows: auto auto; /* Hai hàng */
+  gap: 10px; /* Khoảng cách giữa các phần */
+}
+
+/* Video Player */
+.shadowing .video-player {
+  grid-column: 1 / 2; /* Thuộc cột 1 */
+  grid-row: 1 / 2; /* Thuộc hàng 1 */
+  width: 875px;
+  height: 641px;
+}
+
+.shadowing .video-player .video-frame {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Đảm bảo video khớp kích thước */
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Để phần video có nền trong suốt */
+}
+
+/* Transcript */
+.shadowing .transcript {
+  grid-column: 2 / 3; /* Thuộc cột 2 */
+  grid-row: 1 / 3; /* Trải dài cả 2 hàng */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shadowing .transcript .nav-bar {
+  height: 81px;
+  background: rgba(108, 108, 108, 0.9); /* Nền xám với độ trong suốt */
+  border-radius: 5px;
+}
+
+.shadowing .transcript .content-section {
+  flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+  background: rgba(23, 17, 0, 0.8); /* Thêm độ trong suốt 0.8 */
+  border-radius: 5px;
+  overflow-y: auto; /* Kích hoạt cuộn dọc */
+  max-height: 755px; /* Chiều cao tối đa */
+  padding: 10px; /* Thêm khoảng trống bên trong */
+}
+
+/* Transcript Section (Navigation) */
+.shadowing .transcript-section {
+  grid-column: 1 / 2; /* Thuộc cột 1 */
+  grid-row: 2 / 3; /* Thuộc hàng 2 */
+  height: 196px;
+  border-radius: 10px;
+  background: rgba(26, 26, 26, 0.9); /* Nền tối với độ trong suốt */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Nút điều hướng */
+.shadowing .navigation {
+  display: flex;
+  justify-content: space-between; /* Đẩy các nút ra hai bên */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  width: 100%; /* Đảm bảo chiếm hết chiều ngang */
+  padding: 0 10px; /* Thêm khoảng cách hai bên */
+}
+
+.shadowing .navigation a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.shadowing .navigation .Previous {
+  margin-left: 0; /* Loại bỏ khoảng cách thừa */
+}
+
+.shadowing .navigation .Next {
+  margin-right: 0; /* Loại bỏ khoảng cách thừa */
+}
+
+/* Script Items */
+.shadowing .scrip {
+  display: flex;
+  position: relative;
+  width: 100%; /* Chiếm toàn chiều ngang */
+  margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+.shadowing .content-section {
+  display: flex;
+  flex-direction: column; /* Bố trí theo cột */
+  align-items: flex-start; /* Canh đều các mục */
+}
+
+.shadowing .content-section .time {
+  margin-top: 15px;
+  margin-left: 10px; /* Điều chỉnh khoảng cách bên trái */
+  border-radius: 20px;
+  background: #fff;
+  width: 67px;
+  height: 26px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.shadowing .content-section .desc {
+  margin-left: 10px;
+  margin-top: 15px;
+  flex: 1;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.shadowing .content-section .scrip::after {
+  content: "";
+  display: block;
+  width: 100%; /* Đường viền chạy toàn chiều ngang */
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5); /* Đường viền với độ trong suốt */
+  position: absolute;
+  bottom: -15px; /* Canh chỉnh dưới */
+  left: 0;
+}
+
+/* ========================= */
+.transcript-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.transcript-label {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(82, 91, 241, 0.8); /* Nền màu xanh với độ trong suốt */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 20px; /* Bo góc cho nút */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgba(255, 255, 255, 0.9); /* Nút trắng với độ trong suốt */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%; /* Bo tròn nút bên trong */
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.close {
+  margin-left: auto;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6); /* Nền mờ tối */
+  border-radius: 4px; /* Thêm bo góc */
+}

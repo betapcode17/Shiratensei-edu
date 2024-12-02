@@ -1,0 +1,114 @@
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fa;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-image: url(./Image/nen.jpg);
+}
+.Idoms_Vocabulary {
+  max-width: 80rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: auto; /* Thêm cuộn dọc */
+  max-height: 80vh; /* Chiều cao tối đa, có thể điều chỉnh */
+}
+.Idoms_Vocabulary h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2e2e2e;
+}
+
+.Idoms_Vocabulary p {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.Idoms_Vocabulary ul {
+  font-size: 1.6rem;
+  color: #555;
+  margin: 2rem 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.Idoms_Vocabulary li {
+  margin-bottom: 2rem;
+}
+.big-space {
+  height: 80px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Idoms_Vocabulary {
+    padding: 1rem;
+  }
+
+  .Idoms_Vocabulary h1 {
+    font-size: 2rem;
+  }
+
+  .Idoms_Vocabulary p,
+  .Idoms_Vocabulary ul {
+    font-size: 1.4rem;
+  }
+
+  .Idoms_Vocabulary .buttons {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjusted to ensure spacing between buttons is consistent */
+  margin-top: 2rem; /* Add space above buttons */
+}
+
+.buttons button {
+  height: 50px; /* Adjusted height for better clickability */
+  font-size: 1.6rem; /* Ensures readability */
+  padding: 0 20px; /* Added padding for better click area */
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #2e2100;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #4a3421;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.buttons button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Add a subtle focus ring */
+}
